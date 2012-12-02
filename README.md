@@ -10,7 +10,7 @@ Then refactored and reworked.
 
 In Gemfile
 
-`gem 'bitcoin-client'`
+`gem 'bitcoin-client', github: 'kristianmandrup/bitcoin-client`
 
 Bundle the gem in your project!
 
