@@ -11,7 +11,7 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'bitcoin/client/version'
+# require 'bitcoin/client/version'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
@@ -19,11 +19,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bitcoin-client"
   gem.homepage = "http://github.com/kristianmandrup/bitcoin-client"
   gem.license = "MIT"
-  gem.summary = %Q{Bitcoin client for Rails}
+  gem.summary = %Q{Bitcoin client for Ruby AND for Rails}
   gem.description = %Q{Use Bitcoin in your Ruby OR Rails project}
   gem.email = "kmandrup@gmail.com"
   gem.authors = ["Kristian Mandrup"]
-  gem.version = BitCoin::Client::VERSION
+  # gem.version = BitCoin::Client::VERSION
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -43,8 +43,8 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  # File.exist?('VERSION') ? File.read('VERSION') : ""
-  version = BitCoin::Client::VERSION 
+  # BitCoin::Client::VERSION  
+  version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "bitcoin-client #{version}"
